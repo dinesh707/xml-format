@@ -1,5 +1,9 @@
+
+> This project is a forked from [benalexau/xml-format](https://github.com/benalexau/xml-format) project. ASLv2 license will be kept in the project as it was originally.
+
 Maven XML Formatter Plugin
 ==========================
+
 This Maven plugin automatically formats XML files.
 
 This plugin ensures all your XML files look and feel the same, with consistent
@@ -39,6 +43,7 @@ Second, enable the plugin. Example configuration settings are shown below which 
                 <version>2.1.1</version>
                 <configuration>
                     <useTabs>false</useTabs>
+                    <indentSize>4</indentSize>
                     <includes>
                         <include>**/*.xml</include>
                     </includes>
@@ -61,6 +66,12 @@ Second, enable the plugin. Example configuration settings are shown below which 
 
 If you would prefer to only run XML formatting on request, you can omit the
 ``executions`` element above and instead run ``mvn tscm:xmlFormatter``.
+
+Configurations
+-------
+
+ - **useTabs** : This will convert your indented space groups into tabs. (*default : false*)
+ - **indentSize** : Will indent text based on given number of spaces. The effect of this feature will be overridden by *useTabe=true*, since it converts space blocks to tabs. (*default : 4 spaces*)
 
 History
 -------
